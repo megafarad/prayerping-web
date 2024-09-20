@@ -1,0 +1,12 @@
+@import play.api.i18n.Messages
+@import play.twirl.api.Html
+
+@import org.prayerping.models.User
+@(user: User, signInUrl: String, resetPasswordUrl: String)(implicit messages: Messages)
+
+<html>
+    <body>
+        <p>@messages("email.already.signed.up.greeting", user.name.getOrElse("user"))</p>
+        @Html(messages("email.already.signed.up.html.text", signInUrl, resetPasswordUrl))
+    </body>
+</html>

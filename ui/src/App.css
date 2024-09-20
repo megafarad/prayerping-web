@@ -1,0 +1,250 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.pro-sidebar {
+  position: fixed;
+  width: 250px; /* Adjust this width as needed */
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.pro-sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 60px;
+  background-color: #282c34; /* Adjust the background color as needed */
+  color: #fff; /* Adjust the text color as needed */
+}
+
+.sidebar-icon {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px;
+  margin-right: 10px;
+}
+
+.sidebar-text {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.main-content {
+  margin-left: 250px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.main-content.collapsed {
+  margin-left: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa; /* Light background color */
+  z-index: 1000;
+  padding: 10px 20px;
+  height: 60px;
+  border-bottom: 1px solid #dee2e6; /* Subtle border for separation */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between items */
+  margin: 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem; /* Smaller font size */
+  color: #343a40; /* Darker text color for contrast */
+}
+
+.header.search-header {
+  display: flex;
+  align-items: center; /* This centers items vertically */
+  justify-content: center; /* This centers items horizontally */
+  height: 60px;
+}
+
+.prayer-request-subheader {
+  background-color: #f8f9fa; /* Light background color */
+  z-index: 1000;
+  padding: 10px 20px;
+  height: 60px;
+  border-bottom: 1px solid #dee2e6; /* Subtle border for separation */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between items */
+  margin: 0;
+}
+
+.prayer-request-subheader h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #343a40; /* Darker text color for contrast */
+}
+
+.prayer-request-form {
+  position: fixed; /* Fix the position */
+  height: auto; /* Adjust the height as needed */
+}
+
+.prayer-menu-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10
+}
+
+.card-link {
+  text-decoration: none;
+  color: #51575d;
+}
+
+.elapsed-time {
+  position: absolute;
+  top: 60px;
+  right: 40px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.reactions {
+  font-size: 24px;
+}
+
+.dropdown-toggle {
+  color: #000000;
+  font-size: 24px;
+}
+
+.dropdown-toggle::after {
+  display: none !important; /* Hides the down arrow */
+}
+
+
+.toast-info {
+  color: #0c5460; /* Darker shade for info text */
+  background-color: #d1ecf1; /* Lighter background for better contrast */
+}
+
+.toast-success {
+  color: #155724; /* Darker shade for success text */
+  background-color: #d4edda; /* Lighter background for better contrast */
+}
+
+.toast-danger {
+  color: #721c24; /* Darker shade for error text */
+  background-color: #f8d7da; /* Lighter background for better contrast */
+}
+
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: auto;
+  color: #6c757d; /* Subdued text color */
+  background-color: #f8f9fa; /* Light background color for contrast */
+  padding: 1em;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.footer-link {
+  color: #495057; /* Darker, more muted link color */
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #343a40; /* Slightly darker color on hover */
+}
+
+meter {
+  background: #efefef;
+  border-radius: 8px;
+  border: 1px solid transparent; /* 2 */
+  box-shadow:
+    0 1px 3px 1px rgba(0,0,0,0.15) inset,
+    0 0 0 1px #333; /* 1 */
+  height: .75em;
+  max-width: 10em;
+  overflow: hidden;
+  width: 100%;
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Webkit based browsers */
+meter[value="0"]::-webkit-meter-optimum-value,
+meter[value="1"]::-webkit-meter-optimum-value { background: red; }
+meter[value="2"]::-webkit-meter-optimum-value { background: yellow; }
+meter[value="3"]::-webkit-meter-optimum-value { background: orange; }
+meter[value="4"]::-webkit-meter-optimum-value { background: green; }
+
+/* Gecko based browsers */
+meter[value="1"]::-moz-meter-bar { background: red; }
+meter[value="2"]::-moz-meter-bar { background: yellow; }
+meter[value="3"]::-moz-meter-bar { background: orange; }
+meter[value="4"]::-moz-meter-bar { background: green; }
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .pro-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .main-content {
+    margin-left: 80px;
+  }
+
+  .sidebar-toggle-btn {
+    display: block;
+  }
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+  background-color: #282c34;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}

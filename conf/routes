@@ -1,0 +1,69 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                                org.prayerping.controllers.ApplicationController.index
+POST        /api/signOut                     org.prayerping.controllers.ApplicationController.signOut
+GET         /authenticate/providers          org.prayerping.controllers.SocialAuthController.providers
+GET         /authenticate/:provider          org.prayerping.controllers.SocialAuthController.authenticate(provider)
+
+
+POST        /api/signUp                                  org.prayerping.controllers.SignUpController.post
+POST        /api/signIn                                  org.prayerping.controllers.SignInController.post
+
+GET         /api/user                                    org.prayerping.controllers.UserController.getLoggedInUser
+
+GET         /api/totpSetup                               org.prayerping.controllers.TotpController.getTotpSetup
+POST        /api/disableTotp                             org.prayerping.controllers.TotpController.disableTotp
+POST        /api/totpSubmit                              org.prayerping.controllers.TotpController.submit
+POST        /api/totpSetup                               org.prayerping.controllers.TotpController.postTotpSetup
+
+POST        /api/totpRecoverySubmit                      org.prayerping.controllers.TotpRecoveryController.submit
+
+POST        /api/password/forgot                         org.prayerping.controllers.ForgotPasswordController.submit
+GET         /api/password/reset/:token                   org.prayerping.controllers.ResetPasswordController.get(token: java.util.UUID)
+POST        /api/password/reset/:token                   org.prayerping.controllers.ResetPasswordController.post(token: java.util.UUID)
+POST        /api/password/change                         org.prayerping.controllers.ChangePasswordController.post
+
+GET         /api/account/email/:email                    org.prayerping.controllers.ActivateAccountController.send(email: String)
+GET         /api/account/activate/:token                 org.prayerping.controllers.ActivateAccountController.activate(token: java.util.UUID)
+
+# App Routes
+GET         /api/prayers                                 org.prayerping.controllers.PrayerRequestController.getPrayerRequests(query: Option[String], page: Int ?= 0, pageSize: Int ?= 10)
+POST        /api/prayers                                 org.prayerping.controllers.PrayerRequestController.createPrayerRequest
+GET         /api/prayers/:id                             org.prayerping.controllers.PrayerRequestController.getPrayerRequest(id: java.util.UUID)
+PUT         /api/prayers/:id                             org.prayerping.controllers.PrayerRequestController.updatePrayerRequest(id: java.util.UUID)
+DELETE      /api/prayers/:id                             org.prayerping.controllers.PrayerRequestController.deletePrayerRequest(id: java.util.UUID)
+GET         /api/prayers/:id/reactions                   org.prayerping.controllers.PrayerReactionController.getPrayerRequestReactions(id: java.util.UUID)
+POST        /api/prayers/:id/reactions                   org.prayerping.controllers.PrayerReactionController.createPrayerRequestReaction(id: java.util.UUID)
+DELETE      /api/prayers/:id/reactions/:reactionId       org.prayerping.controllers.PrayerReactionController.deletePrayerRequestReaction(id: java.util.UUID, reactionId: java.util.UUID)
+GET         /api/responses/:id/reactions                 org.prayerping.controllers.PrayerReactionController.getPrayerResponseReactions(id: java.util.UUID)
+POST        /api/responses/:id/reactions                 org.prayerping.controllers.PrayerReactionController.createPrayerResponseReaction(id: java.util.UUID)
+DELETE      /api/responses/:id/reactions/:reactionId     org.prayerping.controllers.PrayerReactionController.deletePrayerResponseReaction(id: java.util.UUID, reactionId: java.util.UUID)
+GET         /api/prayers/:id/responses                   org.prayerping.controllers.PrayerResponseController.getPrayerResponses(id: java.util.UUID, query: Option[String], page: Int ?= 0, pageSize: Int ?= 10)
+POST        /api/prayers/:id/responses                   org.prayerping.controllers.PrayerResponseController.createPrayerResponse(id: java.util.UUID)
+GET         /api/responses/:id                           org.prayerping.controllers.PrayerResponseController.getPrayerResponse(id: java.util.UUID)
+PUT         /api/responses/:id                           org.prayerping.controllers.PrayerResponseController.updatePrayerResponse(id: java.util.UUID)
+DELETE      /api/responses/:id                           org.prayerping.controllers.PrayerResponseController.deletePrayerResponse(id: java.util.UUID)
+GET         /api/groups                                  org.prayerping.controllers.PrayerGroupController.getPrayerGroups(query: Option[String], page: Int ?= 0, pageSize: Int ?= 10)
+POST        /api/groups                                  org.prayerping.controllers.PrayerGroupController.createPrayerGroup
+PUT         /api/groups/:id                              org.prayerping.controllers.PrayerGroupController.updatePrayerGroup(id: java.util.UUID)
+GET         /api/groups/:id                              org.prayerping.controllers.PrayerGroupController.getPrayerGroup(id: java.util.UUID)
+GET         /api/groups/:id/members                      org.prayerping.controllers.PrayerGroupController.getPrayerGroupMembers(id: java.util.UUID, page: Int ?= 0, pageSize: Int ?= 10)
+POST        /api/groups/:id/members                      org.prayerping.controllers.PrayerGroupController.joinPrayerGroup(id: java.util.UUID)
+DELETE      /api/groups/:id/members/:memberId            org.prayerping.controllers.PrayerGroupController.leavePrayerGroup(memberId: java.util.UUID, id: java.util.UUID)
+GET         /api/groups/:id/prayers                      org.prayerping.controllers.PrayerGroupController.getGroupPrayerRequests(id: java.util.UUID, query: Option[String], page: Int ?= 0, pageSize: Int ?= 10)
+POST        /api/prayers/:id/groups/:groupId             org.prayerping.controllers.PrayerGroupController.sharePrayerRequestWithGroup(id: java.util.UUID, groupId: java.util.UUID)
+DELETE      /api/prayers/:id/groups/:groupId             org.prayerping.controllers.PrayerGroupController.removePrayerRequestFromGroup(id: java.util.UUID, groupId: java.util.UUID)
+GET         /api/handles                                 org.prayerping.controllers.HandleController.getHandleSuggestions(query: String)
+GET         /api/handles/:handle                         org.prayerping.controllers.HandleController.getHandle(handle: String)
+GET         /api/feed                                    org.prayerping.controllers.PrayerFeedController.getPrayerRequestFeed(page: Int ?= 0, pageSize: Int ?= 10)
+GET         /api/user/follows/:targetUserId              org.prayerping.controllers.FollowController.getUserFollow(targetUserId: java.util.UUID)
+GET         /ws                                          org.prayerping.controllers.WebSocketController.socket
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                    controllers.Assets.versioned(file)
+GET         /*file                           org.prayerping.controllers.ApplicationController.assetOrDefault(file)

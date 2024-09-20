@@ -1,0 +1,58 @@
+{
+  "name": "prayerping-web",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rimraf ../public && react-scripts build && ncp build ../public && rimraf build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "private": true,
+  "dependencies": {
+    "@charkour/react-reactions": "^0.11.0",
+    "@reduxjs/toolkit": "^2.2.7",
+    "@zxcvbn-ts/core": "^3.0.3",
+    "@zxcvbn-ts/language-common": "^3.0.3",
+    "@zxcvbn-ts/language-en": "^3.0.1",
+    "@zxcvbn-ts/matcher-pwned": "^3.0.3",
+    "bootstrap": "^5.3.1",
+    "date-fns": "^3.6.0",
+    "i18next": "^23.14.0",
+    "kleur": "^4.1.5",
+    "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18.2.0",
+    "react-google-button": "^0.8.0",
+    "react-google-recaptcha": "^3.1.0",
+    "react-i18next": "^15.0.1",
+    "react-icons": "^5.3.0",
+    "react-pro-sidebar": "^1.1.0",
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.26.1",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "ncp": "^2.0.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1"
+  },
+  "proxy": "http://localhost:9000",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "packageManager": "yarn@1.22.18"
+}

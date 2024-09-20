@@ -1,0 +1,6 @@
+@import play.api.i18n.Messages
+
+@(user: org.prayerping.models.User, signInUrl: String, resetPasswordUrl: String)(implicit messages: Messages)
+@messages("email.already.signed.up.greeting", user.name.getOrElse("user"))
+
+@messages("email.already.signed.up.txt.text", signInUrl, resetPasswordUrl)

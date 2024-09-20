@@ -1,0 +1,229 @@
+error.email = Valid email required
+error.required = This field is required
+invalid.credentials = Invalid credentials!
+invalid.unexpected.totp = Unexpected TOTP exception!
+invalid.verification.code = Invalid verification code!
+invalid.recovery.code = Invalid recovery code!
+invalid.request = Invalid request!
+access.denied = Access denied!
+could.not.authenticate = Could not authenticate with social provider! Please try again!
+
+home.title = Silhouette - Home
+sign.up.title = Silhouette - Sign Up
+sign.in.title = Silhouette - Sign In
+totp.title = Silhouette - TOTP
+forgot.password.title = Silhouette - Forgot Password
+reset.password.title = Silhouette - Reset Password
+change.password.title = Silhouette - Change Password
+activate.account.title = Silhouette - Activate Account
+
+toggle.navigation = Toggle navigation
+welcome.signed.in = Welcome, you are now signed in!
+
+totp.enable = Enable two-factor authentication
+totp.disable = Disable two-factor authentication
+totp.enabling.title = 2 factor auth enabling
+totp.disabled.title = 2 factor auth is not enabled
+totp.enabled.title = 2 factor auth is enabled
+totp.shared.key.title = Shared key:
+totp.recovery.tokens.title = Recovery tokens:
+totp.enabling.info = 2 factor auth enabled successfully!
+totp.disabling.info = 2 factor auth disabled successfully!
+totp.recovery.code = Recovery code
+totp.verification.code = Verification Code
+totp.verify = Verify
+totp.open.the.app.for.2fa = Open the two-factor authentication app on your device to view your authentication code and verify your identity.
+totp.dont.have.your.phone = Don't have your phone?
+totp.use.recovery.code = Enter a two-factor recovery code
+totp.lost.your.recovery.codes = Lost your recovery codes?
+totp.contact.support = Contact support
+
+sign.up.account = Sign up for a new account
+sign.in.credentials = Sign in with your credentials
+sign.in.totp = Two-factor authentication
+sign.in.totp.recovery = Two-factor authentication using recovery code
+
+error = Error!
+info = Info!
+success = Success!
+home = Home
+first.name = First name
+last.name = Last name
+full.name = Full name
+email = Email
+password = Password
+send = Send
+change = Change
+reset = Reset
+sign.up = Sign up
+sign.in = Sign in
+sign.out = Sign out
+sign.in.now = Sign in now
+sign.up.now = Sign up now
+already.a.member = Already a member?
+not.a.member = Not a member?
+forgot.your.password = Forgot your password?
+forgot.password = Forgot password
+reset.password = Reset password
+change.password = Change password
+activate.account = Activate Account
+current.password = Current password
+new.password = New password
+
+remember.me = Remember my login on this computer
+or.use.social = Or use your existing account on one of the following services to sign in:
+forgot.password.info = Please enter your email address and we will send you an email with further instructions to reset your password.
+strong.password.info = Strong passwords include numbers, letters and punctuation marks.
+current.password.invalid = The entered password is invalid. Please enter the correct password!
+activate.account.text1 = You can''t log in yet. We previously sent an activation email to you at:
+activate.account.text2 = Please follow the instructions in that email to activate your account.
+activate.account.text3 = Click <a href="{0}">here</a> to send the activation email again.
+
+sign.up.email.sent = You''re almost done! We sent an activation mail to {0}. Please follow the instructions in the email to activate your account. If it doesn''t arrive, check your spam folder, or try to log in again to send another activation mail.
+activation.email.sent = We sent another activation email to you at {0}. It might take a few minutes for it to arrive; be sure to check your spam folder.
+reset.email.sent = We have sent you an email with further instructions to reset your password, on condition that the address was found in our system. If you do not receive an email within the next 5 minutes, then please recheck your entered email address and try it again.
+
+invalid.activation.link = The link isn't valid anymore! Please sign in to send the activation email again.
+invalid.reset.link = The link isn't valid anymore! Please request a new link to reset your password.
+
+password.reset = We have reset your password. You can now sign in with your credentials.
+account.activated = Your account is now activated! Please sign in to use your new account.
+password.changed = Your password has been changed.
+
+google = Google
+facebook = Facebook
+twitter = Twitter
+vk = VK
+xing = Xing
+yahoo = Yahoo
+
+##########
+# Emails
+##########
+
+email.from = Silhouette <noreply@automail.megafarad.com>
+
+# Sign Up
+email.sign.up.subject = Welcome to PrayerPing: Activate Your Account Now!
+email.sign.up.greeting = Dear {0},
+email.sign.up.html.text = <p>Welcome to PrayerPing, a vibrant interfaith community dedicated to the power of prayer, reflection, and spiritual support. We&#39;re excited to welcome you aboard as we embrace diversity and share in the universal practice of prayer. Just one more step to connect with a world of compassion and understanding.</p> \
+                          <p><strong>Activate Your Account</strong></p> \
+                          <p>Please confirm your email address to activate your PrayerPing account. Click the link below to complete your registration:</p> \
+                          <p><a href="{0}">Activate My Account</a></p> \
+                          <p>This link will expire in 24 hours. Should you need a new one, simply request another activation email from our login page.</p> \
+                          <p><strong>Discover PrayerPing</strong></p> \
+                          <p>With your account active, you&#39;re ready to:</p> \
+                          <ul> \
+                          <li>Share and request prayers across different faith traditions, celebrating our shared humanity.</li> \
+                          <li>Engage with prayer groups that align with your spiritual journey and interests.</li> \
+                          <li>Participate in enriching dialogues that foster understanding and connections across faith communities.</li> \
+                          </ul> \
+                          <p><strong>Connect and Grow</strong></p> \
+                          <p>PrayerPing is a space for everyone, regardless of their faith background, to find solace, inspiration, and community. Check out our features that highlight daily wisdom, stories of hope, and the power of collective prayer.</p> \
+                          <p>For assistance or to share your thoughts, reach out to our support team at <a href="mailto:support@prayerping.org">support@prayerping.org</a>. We&#39;re here to help and would love to hear from you.</p> \
+                          <p>Thank you for joining PrayerPing. Here&#39;s to a journey of spiritual growth, unity, and boundless support.</p> \
+                          <p>Warmest regards,</p> \
+                          <p>The PrayerPing Team</p> \
+                          <hr> \
+                          <p>This is an automated message, please do not reply directly. For any inquiries, contact us using the support email provided.</p> \
+                          <hr>
+email.sign.up.txt.text = Welcome to PrayerPing, a vibrant interfaith community dedicated to the power of prayer, reflection, and spiritual support. We're excited to welcome you aboard as we embrace diversity and share in the universal practice of prayer. Just one more step to connect with a world of compassion and understanding. \n\
+\n\
+**Activate Your Account**\n\
+\n\
+Please confirm your email address to activate your PrayerPing account. Visit the following link to activate your account: {0} \n\
+\n\
+This link will expire in 24 hours. Should you need a new one, simply request another activation email from our login page.\n\
+\n\
+**Discover PrayerPing**\n\
+\n\
+With your account active, you're ready to:\n\
+\n\
+- Share and request prayers across different faith traditions, celebrating our shared humanity.\n\
+- Engage with prayer groups that align with your spiritual journey and interests.\n\
+- Participate in enriching dialogues that foster understanding and connections across faith communities.\n\
+\n\
+**Connect and Grow**\n\
+\n\
+PrayerPing is a space for everyone, regardless of their faith background, to find solace, inspiration, and community. Check out our features that highlight daily wisdom, stories of hope, and the power of collective prayer.\n\
+\n\
+For assistance or to share your thoughts, reach out to our support team at [support@prayerping.org](mailto:support@prayerping.org). We're here to help and would love to hear from you.\n\
+\n\
+Thank you for joining PrayerPing. Here's to a journey of spiritual growth, unity, and boundless support.\n\
+\n\
+Warmest regards,\n\
+\n\
+The PrayerPing Team\n\
+\n\
+---\n\
+\n\
+This is an automated message, please do not reply directly. For any inquiries, contact us using the support email provided.\n\
+\n\
+---\n\
+
+# Already Signed Up
+email.already.signed.up.subject = Account Notice: Existing Account Detected for PrayerPing
+email.already.signed.up.greeting = Dear {0},
+email.already.signed.up.html.text = <p>We noticed an attempt to create a new account with PrayerPing using an email address that is already associated with an existing account. It seems like you&#39;re already part of our interfaith prayer community!</p> \
+                                    <p><strong>Access Your Account</strong></p> \
+                                    <p>If you&#39;re trying to log in to PrayerPing, you can <a href="{0}">click here to sign in</a> directly. </p>  \
+                                    <p>Forgot your password? No worries, you can easily <a href="{1}">reset your password</a> and regain access to your account.</p> \
+                                    <p><strong>Explore More with PrayerPing</strong></p> \
+                                    <p>As a valued member of our community, you have access to a diverse and inclusive platform where individuals from all faith backgrounds come together in prayer and support. Here’s what you can do:</p> \
+                                    <ul> \
+                                    <li>Revisit and contribute to prayer groups.</li> \
+                                    <li>Explore new discussions and share your insights.</li> \
+                                    <li>Connect with members from various faith traditions.</li> \
+                                    </ul> \
+                                    <p><strong>Need Assistance?</strong></p> \
+                                    <p>If you believe this message is an error or if you have any questions, please don&#39;t hesitate to contact our support team at <a href="mailto:support@prayerping.org">support@prayerping.org</a>. We&#39;re here to help ensure your experience with PrayerPing is seamless and fulfilling.</p> \
+                                    <p>Thank you for your continued participation in the PrayerPing community. We’re honored to accompany you on your spiritual journey.</p> \
+                                    <p>Warm regards,</p> \
+                                    <p>The PrayerPing Team</p> \
+                                    <hr> \
+                                    <p>Please do not reply to this email directly. For support or inquiries, reach out to us via the provided support email.</p> \
+                                    <hr>
+
+email.already.signed.up.txt.text = We noticed an attempt to create a new account with PrayerPing using an email address that is already associated with an existing account. It seems like you’re already part of our interfaith prayer community! \n\
+\n\
+**Access Your Account** \n\
+\n\
+If you’re trying to log in to PrayerPing, you can do so at {0}. \n\
+\n\
+Forgot your password? No worries, you can easily reset your password at {1} and regain access to your account. \n\
+\n\
+**Explore More with PrayerPing** \n\
+\n\
+As a valued member of our community, you have access to a diverse and inclusive platform where individuals from all faith backgrounds come together in prayer and support. Here’s what you can do: \n\
+\n\
+- Revisit and contribute to prayer groups. \n\
+- Explore new discussions and share your insights. \n\
+- Connect with members from various faith traditions. \n\
+\n\
+**Need Assistance?** \n\
+\n\
+If you believe this message is an error or if you have any questions, please don't hesitate to contact our support team at support@prayerping.org. We're here to help ensure your experience with PrayerPing is seamless and fulfilling. \n\
+\n\
+Thank you for your continued participation in the PrayerPing community. We’re honored to accompany you on your spiritual journey. \n\
+\n\
+Warm regards, \n\
+\n\
+The PrayerPing Team \n\
+\n\
+---\n\
+\n\
+Please do not reply to this email directly. For support or inquiries, reach out to us via the provided support email.\n\
+\n\
+---\n\
+
+# Reset Password
+email.reset.password.subject = Reset password
+email.reset.password.hello = Hello {0},
+email.reset.password.html.text = Please follow <a href="{0}">this link</a> to reset your password.
+email.reset.password.txt.text = Please follow the link to reset your password: {0}
+
+# Activate Account
+email.activate.account.subject = Activate account
+email.activate.account.hello = Hello {0},
+email.activate.account.html.text = Please follow <a href="{0}">this link</a> to confirm and activate your new account.
+email.activate.account.txt.text = Please follow the link to confirm and activate your new account: {0}
