@@ -24,7 +24,7 @@
 
 - **Back-End:** Scala Play Framework
 - **Front-End:** React with Redux (using Redux Toolkit)
-- **Database:** PostgreSQL
+- **Database:** PostgreSQL and Redis
 - **Authentication:** Play Silhouette
 - **WebSockets Integration:** Real-time updates via WebSocket
 
@@ -36,6 +36,7 @@
 - **SBT** (Scala Build Tool)
 - **Node.js** (14.x or later)
 - **PostgreSQL** (12.x or later)
+- **Redis** (5.x or later)
 
 ### Steps
 
@@ -55,8 +56,8 @@
 
    ```bash
    sbt update
-   cd frontend
-   npm install
+   cd ui
+   yarn build
    ```
 
 4. **Run the application:**
@@ -90,15 +91,11 @@ Please make sure your code follows the project's coding standards and includes t
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU AGPL-3.0 License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
 If you have any questions or feedback, feel free to reach out:
 
-- **Project Maintainer:** [Your Name](mailto:your.email@example.com)
-- **GitHub Issues:** [https://github.com/yourusername/PrayerPing/issues](https://github.com/yourusername/PrayerPing/issues)
-
----
-
-This template should give you a solid foundation for the README file. If you have any specific sections you'd like to expand on or additional information you'd like to include, feel free to modify it!
+- **Project Maintainer:** [Chris Carrington](mailto:chris@megafarad.com)
+- **GitHub Issues:** [https://github.com/megafarad/prayerping-web/issues](https://github.com/megafarad/prayerping-web/issues)
